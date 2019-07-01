@@ -3,6 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers } from 'redux';
+import logger from 'redux-logger';
+import reduxPromise from 'redux-promise';
 
 // internal modules
 import App from './components/app';
@@ -26,7 +28,7 @@ const reducers = combineReducers({
   messages: messagesReducer,
   currentUser: identityReducer,
   selectedChannel: selectedChannelsReducer,
-  channels: channelsReducer;
+  channels: channelsReducer
 });
 
 // render an instance of the component in the DOM
